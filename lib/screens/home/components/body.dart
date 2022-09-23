@@ -1,4 +1,8 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:movie_app/screens/home/components/movie_carousel.dart';
+import 'categories.dart';
+import 'genres.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -6,39 +10,9 @@ class Body extends StatelessWidget {
     return Column(
       children: <Widget>[
         CategoryList(),
+        Ganres(),
+        MovieCarousel(),
       ],
-    );
-  }
-}
-
-class CategoryList extends StatefulWidget {
-  @override
-  _CategoryListState createState() => _CategoryListState();
-}
-
-class _CategoryListState extends State<CategoryList> {
-  int selectedCategory = 0;
-  List<String> categories = ['In Theather', 'Box Office', 'Comming Soon'];
-
-  @override
-  Widget build(BuildContext) {
-    return Container(
-      height: 60,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: categories.length,
-        itemBuilder: (context, int index) => buildCategory(index, context),
-      ),
-    );
-  }
-
-  Text buildCategory(int index, BuildContext context) {
-    return Text(
-      categories[index],
-      style: Theme.of(context)
-          .textTheme
-          .headline5
-          ?.copyWith(fontWeight: FontWeight.w600),
     );
   }
 }

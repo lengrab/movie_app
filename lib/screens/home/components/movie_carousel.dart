@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:movie_app/constants.dart';
@@ -14,7 +15,7 @@ class _MovieCarouselState extends State<MovieCarousel> {
   late PageController _pageController;
   final List<Movie> movies = [
     Movie.fromJson(jsonDecode('''{
-			"id": "movie-82050",
+			"id": "poster_1",
 			"type": "anime",
 			"link": "//kodik.info/video/82050/046ef0949b7bf1e7ed10e59f78fd5a59/720p",
 			"title": "Блич",
@@ -44,7 +45,7 @@ class _MovieCarouselState extends State<MovieCarousel> {
 			]
 		}''')),
     Movie.fromJson(jsonDecode('''{
-			"id": "movie-20609",
+			"id": "poster_2",
 			"type": "anime",
 			"link": "//kodik.info/video/20609/e8fd5bc1190b7eb1ee1a3e1c3aec5f62/720p",
 			"title": "Наруто 4",
@@ -72,14 +73,47 @@ class _MovieCarouselState extends State<MovieCarousel> {
 				"https://i.kodik.biz/screenshots/video/20609/4.jpg",
 				"https://i.kodik.biz/screenshots/video/20609/5.jpg"
 			]
+		}''')),
+    Movie.fromJson(jsonDecode('''{
+			"id": "poster_2",
+			"type": "anime",
+			"link": "//kodik.info/video/20609/e8fd5bc1190b7eb1ee1a3e1c3aec5f62/720p",
+			"title": "Наруто 1",
+			"title_orig": "Gekijô-ban Naruto shippûden",
+			"other_title": "Наруто (фильм четвёртый) - Смерть Наруто / Наруто: Ураганные Хроники - Адепты Тёмного царства",
+			"translation": {
+				"id": 767,
+				"title": "SHIZA Project",
+				"type": "voice"
+			},
+			"year": 2007,
+			"kinopoisk_id": "283418",
+			"imdb_id": "tt0988982",
+			"worldart_link": "http://www.world-art.ru/animation/animation.php?id=6476",
+			"shikimori_id": "2472",
+			"quality": "BDRip 720p",
+			"camrip": false,
+			"blocked_countries": [],
+			"created_at": "2018-01-21T13:18:37Z",
+			"updated_at": "2019-11-16T22:13:46Z",
+			"screenshots": [
+				"https://i.kodik.biz/screenshots/video/20609/1.jpg",
+				"https://i.kodik.biz/screenshots/video/20609/2.jpg",
+				"https://i.kodik.biz/screenshots/video/20609/3.jpg",
+				"https://i.kodik.biz/screenshots/video/20609/4.jpg",
+				"https://i.kodik.biz/screenshots/video/20609/5.jpg"
+			]
 		}'''))
   ];
-  int initialPage = 1;
+  int initialPage = 0;
 
   @override
   void initState() {
     super.initState();
-    _pageController = PageController();
+    _pageController = PageController(
+        initialPage: initialPage,
+        viewportFraction: 0.8,
+    );
   }
 
   @override
@@ -95,9 +129,36 @@ class _MovieCarouselState extends State<MovieCarousel> {
       child: AspectRatio(
         aspectRatio: 0.85,
         child: PageView.builder(
+          onPageChanged: (value) {
+            setState(() {
+              initialPage = value;
+            });
+          },
             itemCount: movies.length,
-            itemBuilder: (context, index) => MovieCard(movie: movies[index])),
+            scrollDirection: Axis.horizontal,
+            physics:  ClampingScrollPhysics(),
+            controller: _pageController,
+            itemBuilder: (context, index) => buildMovieSlider(index)),
       ),
     );
   }
+
+  Widget buildMovieSlider(int index) => AnimatedBuilder(
+        animation: _pageController,
+        builder: (context, child) {
+          double value = 0;
+          if ( _pageController.hasClients ) {
+              value = index - _pageController.page!;
+              value = (value * 0.038).clamp(-1, 1);
+          }
+          return AnimatedOpacity(
+            duration: Duration(microseconds: 350),
+            opacity: initialPage == index ? 1 : 0.4,
+            child: Transform.rotate(
+              angle: math.pi * value,
+              child: MovieCard(movie: movies[index]),
+            ),
+          );
+        },
+      );
 }

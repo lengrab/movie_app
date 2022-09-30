@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f988e05b-729e-4814-bdbe-1e72832048d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/screens/home/components/categories.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/home/components/genre_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/home/components/genres.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/home/components/movie_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/home/components/movie_carousel.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/details/components/body.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/details/details.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/star.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/star.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/home/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/movie_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/movie_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/movie_carousel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/movie_carousel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +30,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2F4qIPauUGAyqCp9pkfuCi3dGXO" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" />
     <panes>
@@ -44,18 +49,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "F:/Dart/movie_app",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Dart",
-    "show.migrate.to.gradle.popup": "false"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,6 +71,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663761623242</updated>
+      <workItem from="1663949777556" duration="2000" />
+      <workItem from="1663949781439" duration="598000" />
+      <workItem from="1664120834445" duration="6423000" />
+      <workItem from="1664542979148" duration="3222000" />
     </task>
     <servers />
   </component>
@@ -72,6 +83,9 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

@@ -17,7 +17,7 @@ class MovieCard extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                       boxShadow: [kDefaultShadow],
-                      borderRadius: BorderRadius.circular(50),
+                      borderRadius: BorderRadius.circular(40),
                       image: const DecorationImage(
                           fit: BoxFit.fill,
                           image: AssetImage('assets/images/poster_2.jpg'))),

@@ -111,8 +111,8 @@ class _MovieCarouselState extends State<MovieCarousel> {
   void initState() {
     super.initState();
     _pageController = PageController(
-        initialPage: initialPage,
-        viewportFraction: 0.8,
+      initialPage: initialPage,
+      viewportFraction: 0.8,
     );
   }
 
@@ -129,14 +129,14 @@ class _MovieCarouselState extends State<MovieCarousel> {
       child: AspectRatio(
         aspectRatio: 0.85,
         child: PageView.builder(
-          onPageChanged: (value) {
-            setState(() {
-              initialPage = value;
-            });
-          },
+            onPageChanged: (value) {
+              setState(() {
+                initialPage = value;
+              });
+            },
             itemCount: movies.length,
             scrollDirection: Axis.horizontal,
-            physics:  ClampingScrollPhysics(),
+            physics: const ClampingScrollPhysics(),
             controller: _pageController,
             itemBuilder: (context, index) => buildMovieSlider(index)),
       ),
@@ -147,15 +147,15 @@ class _MovieCarouselState extends State<MovieCarousel> {
         animation: _pageController,
         builder: (context, child) {
           double value = 0;
-          if ( _pageController.hasClients ) {
-              value = index - _pageController.page!;
-              value = (value * 0.038).clamp(-1, 1);
+          if (_pageController.hasClients) {
+            value = index - _pageController.page!.toDouble();
+            value = math.pi * (value * 0.038).clamp(-1, 1);
           }
           return AnimatedOpacity(
-            duration: Duration(microseconds: 350),
+            duration: const Duration(milliseconds: 350),
             opacity: initialPage == index ? 1 : 0.4,
             child: Transform.rotate(
-              angle: math.pi * value,
+              angle: value,
               child: MovieCard(movie: movies[index]),
             ),
           );

@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f988e05b-729e-4814-bdbe-1e72832048d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/components/ganres.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/details/components/backdrop_and_rating.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/details/components/cast_and_crew.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/details/components/cast_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/details/components/title_duration_and_fub.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/star.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/star.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/home/components/movie_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/movie_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/movie_carousel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/movie_carousel.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/home/details/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/details/components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home/details/details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/details/details.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +76,11 @@
       <workItem from="1663949777556" duration="2000" />
       <workItem from="1663949781439" duration="598000" />
       <workItem from="1664120834445" duration="6423000" />
-      <workItem from="1664542979148" duration="12362000" />
+      <workItem from="1664542979148" duration="13087000" />
+      <workItem from="1664600547355" duration="784000" />
+      <workItem from="1664603409321" duration="1197000" />
+      <workItem from="1664692899560" duration="592000" />
+      <workItem from="1664793134128" duration="8402000" />
     </task>
     <servers />
   </component>
